@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5xh1cmwkw72b"]
+
+[ext_resource type="Script" path="res://player/scripts/CharacterBody2D.gd" id="1_2xvx7"]
+[ext_resource type="Texture2D" uid="uid://b4txgp6wh6bjw" path="res://icon.svg" id="1_10f8u"]
+[ext_resource type="PackedScene" uid="uid://bfp7ys2jtgeci" path="res://player/scene/hand.tscn" id="3_xxwe8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4yss"]
+size = Vector2(100, 104)
+
+[node name="player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_2xvx7")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(0.820313, 0.851563)
+texture = ExtResource("1_10f8u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_v4yss")
+
+[node name="hand" parent="CharacterBody2D" instance=ExtResource("3_xxwe8")]
