@@ -4,11 +4,6 @@ var speed = 100
 var player_chase = false
 var player = null
 
-var hit = false
-var bullet = null
-
-
-
 
 func _physics_process(delta):
 	if player_chase:
@@ -29,8 +24,4 @@ func _on_area_2d_body_exited(body):
 	player_chase = false
 
 func _on_hitbox_area_entered(area):
-	hit = true
-	bullet = area
-	print("hit")
-	print(bullet)
 	queue_free()
