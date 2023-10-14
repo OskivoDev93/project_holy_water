@@ -13,6 +13,6 @@ position = Vector2(106, 89)
 
 [node name="enemies" type="Node2D" parent="."]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="enemies"]
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="enemies/Timer" to="." method="_on_timer_timeout"]

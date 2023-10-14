@@ -4,12 +4,12 @@ extends Node2D
 @onready var bullets = $bullets
 @onready var player = $player
 @onready var enemies = $enemies
-@onready var spawnTimer = $Timer
+@onready var spawnTimer = $enemies/Timer
 
 var enemy = preload("res://world/scene/enemies/enemy.tscn")
 @export var spawn_rate = 1.0
 @export var spawn_limit = 10
-@export var nextSpawnTime = 5.0
+@export var nextSpawnTime = 3.0
 
 
 func _ready():
